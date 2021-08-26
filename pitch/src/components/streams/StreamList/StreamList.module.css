@@ -1,0 +1,14 @@
+.list_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list_item h4 {
+    margin: 0 0 5px 0;
+}
+
+.bottom_link {
+    margin-top: 20px;
+    margin-left: auto;
+}

@@ -1,0 +1,32 @@
+.header {
+    background-color: var(--darkest-gray);
+    color: var(--white_alt);
+    padding: 10px 0;
+}
+
+.header h4 {
+    margin: 0;
+}
+
+.header_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav >:not(:last-child) {
+    margin-left: 20px;
+}
+
+.nav >:last-child {
+    margin-left: 30px;
+}
+
+.logo img {
+    width: 125px;
+}

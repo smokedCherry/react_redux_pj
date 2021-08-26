@@ -1,0 +1,16 @@
+.link {
+    cursor: pointer;
+    transition: var(--ui-transition);
+}
+
+.link:hover {
+    color: var(--ui-link--hovered);
+}
+
+.link.icon_left i {
+    margin-right: 10px;
+}
+
+.link.icon_right i {
+    margin-left: 10px;
+}

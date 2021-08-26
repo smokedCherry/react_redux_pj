@@ -1,0 +1,26 @@
+.btn {
+    display: inline-block;
+    width: max-content;
+    border-radius: var(--ui-border-radius);
+    background-color: var(--ui-button);
+    color: var(--ui-button-text);
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: var(--ui-transition);
+}
+
+.btn:hover {
+    background-color: var(--ui-button--hovered);
+}
+
+.btn.block {
+    display: block;
+}
+
+.btn.icon_left i {
+    margin-right: 10px;
+}
+
+.btn.icon_right i {
+    margin-left: 10px;
+}
