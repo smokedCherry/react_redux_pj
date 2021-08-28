@@ -10,6 +10,8 @@ const StreamList = ({filterByUser, streams, currentUserId, isSignedIn, fetchStre
 
 	useEffect(() => fetchStreams(), []); // eslint-disable-line react-hooks/exhaustive-deps
 
+	console.log(streams);
+
 	const renderEdit = (stream) => {
 		if (stream.userId === currentUserId) {
 			return <Link to={`/streams/edit/${stream.id}`} className="icon_right link"><i className="fa fa-pencil"/></Link>

@@ -3,6 +3,8 @@ import {Field, reduxForm} from "redux-form";
 
 const StreamForm = props => {
 
+	console.log(props);
+
 	const renderError = ({error, touched}) => {
 		if (touched && error) {
 			return (

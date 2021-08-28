@@ -1,5 +1,7 @@
+import _ from 'lodash';
 import streams from "../api/streams";
 import history from "../history";
+
 import {
 	SIGN_IN,
 	SIGN_OUT,
@@ -60,16 +62,17 @@ export const deleteStream = id => async dispatch => {
 };
 
 export const addComment = (id, formValues) => async (dispatch, getState) => {
-	const {comments} = getState().streams.filter(stream => stream.id === id)[0];
-	const commentId = ++comments.length;
-
+	const commentsOld = getState().streams[id].comments;
 	const comment = {
-		'id': commentId,
+		'id': commentsOld.length + 1,
 		'author': getState().auth.userGivenName,
-		'text': formValues
+		'text': formValues.comment
 	};
 
-	const response = await streams.patch(`/streams/${id}`, [...comments, comment]);
+	console.log(commentsOld);
+
+	const response = await streams.patch(`/streams/${id}`, {comments: [...commentsOld, comment]});
 
 	dispatch({type: ADD_COMMENT, payload: response.data});
 };
+
